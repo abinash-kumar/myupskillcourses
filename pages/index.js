@@ -1,124 +1,66 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Button } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
+import logo from '../public/upskill.png';
+// import './App.css';
+import BenefitList from '../components/BenefitList';
+import gym1 from '@/public/assets/gym1.png';
+import gym2 from '../public/assets/gym2.png';
+import gym3 from '../public/assets/gym3.png';
+import gym4 from '../public/assets/gym4.png';
+import gym5 from '../public/assets/gym5.png';
+import gym6 from '../public/assets/gym6.png';
+import gym7 from '../public/assets/gym7.png';
+import gym8 from '../public/assets/gym8.png';
 
-const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+function Landing() {
+
+  const imglist = [
+    { head: 'जिम की शुरुआत करना चाहते है?', para: 'जिम दो तरह के होते हैं पहला जिम जो कार्डियो उपकरणों और वेट लिफ्टिंग आदि की सुविधाओं से युक्त होता है इसमें वजन कम करना, बॉडी बनाने आदि की ट्रेनिंग दी जाती है दूसरा फिटनेस सेंटर जिसमे वजन घटाना, वजन बढ़ाना, योगा, एरोबिक्स, मार्शल आर्ट, आसन आदि सिखाए जाते हैं फिटनेस सेंटर का बिजनेस जिम की तुलना में थोड़ा महंगा होता है जिम हो या फिटनेस सेंटर, दोनों के लिए विस्तृत ज्ञान और अनुभव जरुरी होता है', imageSrc: gym1 },
+    { head: 'Gym के लिए स्थान का चयन', para: 'जिम या फिटनेस सेंटर के बिजनेस के लिए स्थान यानी जगह सबसे ज्यादा महत्वपूर्ण है ऐसा नहीं है कि आप इसे शहर के किसी प्राइम लोकेशन पर ही शुरु करें, आप इसे किसी गली में भी खोल सकते हैं, लेकिन यह जरुरी है कि वहां आने वालों के लिए पार्किंग की सुविधा जरुर हो आप इसे किसी भी फ्लोर पर शुरु कर सकते हैं एक अच्छा जिम खोलने के लिए 2000 से 2500 स्क्वायर फीट तक का प्लॉट जरुरी है बजट कम हो तो थोड़ा कम जगह भी चल सकता है इतना जगह तो जरुर होना चाहिए कि कम से कम 15 मशीन जरुर आ जाए', imageSrc: gym2 },
+    { head: 'जिम का रजिस्ट्रेशन', para: 'नियमों के अनुसार जिम का रजिस्ट्रेशन स्माल स्केल इंडस्ट्री के तहत होता है इसके लिए जिले के उद्योग विभाग से फॉर्म प्राप्त कर सकते हैं फॉर्म में सभी नियमों का उल्लेख होता है इस फॉर्म के भरने के बाद आपको जिम चलाने का लाइसेंस प्राप्त हो जाता है शुरुआती दौर में उद्योग विभाग अस्थायी लाइसेंस देता है, बाद में आप स्थायी लाइसेंस के लिए भी आवेदन कर सकते हैं आजकल रजिस्ट्रेशन के लिए ऑनलाइन आवेदन की भी व्यवस्था है ऑनलाइन सुविधा से आप भागदौड़ से बच सकते हैं', imageSrc: gym3 },
+    { head: 'gym opening kaise kere', para: 'नेस सेंटर के बिजनेस के लिए स्थान यानी जगह सबसे ज्यादा महत्वपूर्ण है ऐसा नहीं है कि आप इसे शहर के किसी प्राइम लोकेशन पर ही शुरु करें, आप इसे किसी गली में भी खोल सकते हैं, लेकिन यह जरुरी है कि वहां आने वालों के लिए पार्किंग की सुविधा जरुर हो आप इसे किसी भी फ्लोर पर शुरु कर सकते हैं एक अच्छा जिम खोलने के लिए 2000 से 2500 स्क्वायर फीट तक का प्लॉट जरुरी है बजट कम हो तो थोड़ा कम जगह भी चल सकता है इतना जगह तो जरुर होना चाहिए कि कम से कम 15 मशीन जरुर आ जाए', imageSrc: gym2 },
+    { head: 'जिम का रजिस्ट्रेशन', para: 'नियमों के अनुसार जिम का रजिस्ट्रेशन स्माल स्केल इंडस्ट्री के तहत होता है इसके लिए जिले के उ', imageSrc: gym4 },
+    { head: 'जिम खोलने के लिए जरूरी है ये मशीनें', para: 'उनमें ट्रेड मिल, बेंच प्रेस, लेग प्रेस, लैट पुल डाउन, बटर फ्लाई, पैक डेक, बेंच प्रेस, लेग प्रेस, केबल क्रॉस ओवर, डिप बार, प्रीचर बेंच, सिटअप बेंच, दो नॉर्मल बेंच, योगा मैट, स्किपिंग रोप, रॉड, डंबल, स्टैंड वगैरह आदि महत्वपूर्ण है इन मशीनों में सबसे महंगा ट्रेड मिल होता है ट्रेड मिल पर लोग दौड़ लगाते हैं बिजनेस के लिहाज से बेहतर ट्रेड मिल की कीमत लगभग 01 लाख रुपये होती है कम दाम वाले ट्रेड मिल घर के लिए ठीक होता है लेकिन बिजनेस के लिए नहीं', imageSrc: gym5 },
+    { head: 'जिम का माहौल प्रेरणादायक रखें ', para: ' सिर्फ दीवारों पर motivational posters चिपका देने से काम नहीं चलेगा, आपको अपने जिम का माहौल भी motivational रखना ह2. आपके जिम का माहोल अगर Positive and motivational होगा तो जिम के सदस्य भी लम्बे समय तक आपके साथ टिके रहेेगे', imageSrc: gym6 },
+    { head: 'जिम की मशीनें कहां से खरीदें?', para: 'कई बड़ी कंपनियां हैं तो जिम के लिए मशीनों का निर्माण करती हैं हर बड़े शहरों में ऐसे शोरुम मौजूद होते हैं, जहां जिम के लिए आधुनिक मशीनें बिकती है कई मशीनें आपका अपने यहां लोकल में बनवा सकते हैं मशीनें खरीदने के लिए इंटरनेट आपकी बड़ी मदद कर सकता है इंटरनेट की मदद से आप अलग अलग कंपनियों के मशीनों की जानकारी हासिल कर सकते हैं इससे आपको हर जगह के रेट भी मालूम हो जाएंगे और आप अपनी सुविधा के हिसाब से खरीद कर सकते हैं', imageSrc: gym7 },
+    { head: 'जिम की फीस क्या रखे?', para: 'आम तौर पर जिम की फीस 1000 रुपये मासिक होती है अगर आपके जिम में 200 लोग भी नियमित तौर पर आते हैं तो आपको फीस से 2 लाख रुपये प्राप्त होते हैं छोटे मोटे खर्चों को निकाल दे तो आपको हर महीने 1 लाख रुपये आसानी से बच जाएंगे जब मशीनों का कॉस्ट निकल जाता है तो फिर आपकी ये आमदनी सीधे 1 लाख 40 हजार रुपये मासिक हो जाता है कोशिश हो कि 200 ग्राहकों की संख्या हमेशा मेंटेन रहे', imageSrc: gym8 }
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div className="App">
+      <header className="App-header">
+        <img src='/upskill.png' className="upskill-logo" alt="upskill-logo" />
+      </header>
+      <p style={{ marginLeft: 40, marginRight: 40 }}>
+        <span style={{ textTransform: 'uppercase', fontWeight: 800 }}>Complete Workshop </span>
+        <span style={{ textTransform: 'capitalize', fontWeight: 800 }}>Video &nbsp;</span>
+        <span style={{ textTransform: 'lowercase', fontWeight: 300 }}>for how to open your own gym</span>
+      </p>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <p style={{ marginLeft: 20, marginRight: 20, fontSize: 35, fontWeight: 600, textTransform: 'capitalize' }}>
+        <span style={{ color: '#6c3ad3' }}>gym</span> या <span style={{ color: '#6c3ad3' }}>fitness</span> सेंटर का बिजनेस कैसे शुरू करें?
+      </p>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/GFyPzEXAuTA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <p style={{ textTransform: 'capitalize', fontWeight: 300 }}>
+        <span style={{ color: '#6c3ad3' }}>Complete Knowledge</span> in just  <span style={{ color: '#6c3ad3' }}>45 Mins</span> Video
+      </p>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <p style={{ marginLeft: 40, marginRight: 40, fontSize: 25, fontWeight: 600, }}>
+        <span style={{ color: '#6c3ad3' }}>What</span> you will <span style={{ color: '#6c3ad3' }}>Get</span> from this Workshop
+      </p>
+      <br />
+      {[...Array(8).keys()].map((k) => (
+        <BenefitList key={k} iconSrc={`/assets/gym${k + 1}.png`} heading={imglist[k].head} paragraph={imglist[k].para} />
+      ))}
+      <br />
+      <br />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <Button variant="contained" style={{ position: 'fixed', borderRadius: 0, fontWeight: 700, bottom: 0, left: 0, right: 0 }} endIcon={<SendIcon />}>
+        Buy this course now and save more then 1 lakh ₹
+      </Button>
+    </div>
+  );
 }
+
+export default Landing;
