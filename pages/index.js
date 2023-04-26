@@ -41,7 +41,6 @@ function Landing() {
       <p style={{ marginLeft: 20, marginRight: 20, fontSize: 35, fontWeight: 600, textTransform: 'capitalize' }}>
         <span style={{ color: '#6c3ad3' }}>gym</span> या <span style={{ color: '#6c3ad3' }}>fitness</span> सेंटर का बिजनेस कैसे शुरू करें?
       </p>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/GFyPzEXAuTA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       <p style={{ textTransform: 'capitalize', fontWeight: 300 }}>
         <span style={{ color: '#6c3ad3' }}>Complete Knowledge</span> in just  <span style={{ color: '#6c3ad3' }}>45 Mins</span> Video
       </p>
