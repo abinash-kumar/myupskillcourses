@@ -32,6 +32,7 @@ function Landing() {
       <header className="App-header">
         <img src='/upskill.png' className="upskill-logo" alt="upskill-logo" />
       </header>
+      <h1 style={{ color: 'red', fontSize: 60, with: '100%' }} >This website is under construction.</h1>
       <p style={{ marginLeft: 40, marginRight: 40 }}>
         <span style={{ textTransform: 'uppercase', fontWeight: 800 }}>Complete Workshop </span>
         <span style={{ textTransform: 'capitalize', fontWeight: 800 }}>Video &nbsp;</span>
@@ -49,14 +50,16 @@ function Landing() {
         <span style={{ color: '#6c3ad3' }}>What</span> you will <span style={{ color: '#6c3ad3' }}>Get</span> from this Workshop
       </p>
       <br />
-      {[...Array(8).keys()].map((k) => (
-        <BenefitList key={k} iconSrc={`/assets/gym${k + 1}.png`} heading={imglist[k].head} paragraph={imglist[k].para} />
-      ))}
+      <div className="gym-card-container">
+        {[...Array(8).keys()].map((k) => (
+          <BenefitList key={k} iconSrc={`/assets/gym${k + 1}.png`} heading={imglist[k].head} paragraph={imglist[k].para} />
+        ))}
+      </div>
       <br />
       <br />
-
-      <Button variant="contained" style={{ position: 'fixed', borderRadius: 0, fontWeight: 700, bottom: 0, left: 0, right: 0 }} endIcon={<SendIcon />}>
-        Buy this course now and save more then 1 lakh ₹
+      <footer className="footer">This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in ANY WAY. FACEBOOK is a trademark of Facebook Inc. If you have any questions, please feel free to get in touch using the "Contact Us" link provided above.</footer>
+      <Button variant="contained" style={{ position: 'fixed', textTransform: 'initial', borderRadius: 0, fontWeight: 700, bottom: 0, left: 0, right: 0 }} endIcon={<SendIcon />}>
+        Buy this course @499 now and save more then ₹1 lakh
       </Button>
     </div>
   );
