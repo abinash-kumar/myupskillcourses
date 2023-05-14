@@ -65,7 +65,7 @@ function Landing() {
 
       <div className="videoCardGym">
         <div style={{ width: '100%' }}>
-          <img src='/assets/1.png' alt={'heading'} style={{ width: 'calc(100% - 0px)' }} />
+          <img src='/assets/gym6.png' alt={'heading'} style={{ width: 'calc(100% - 0px)' }} />
           {/* <p>Are you passionate about fitness and dreaming of starting your own gym in India?</p> */}
           <p>Our comprehensive course is designed to equip you with the knowledge,
             strategies, and practical insights you need to turn your dream into a reality.
