@@ -1,8 +1,14 @@
 import { Button } from '@mui/material';
+import Link from 'next/link';
+
 import SendIcon from '@mui/icons-material/Send';
 import logo from '../public/upskill.png';
 // import './App.css';
 import BenefitList from '../components/BenefitList';
+import InvoiceTable from '../components/InvoiceTable';
+
+import banner1 from '@/public/assets/1.png';
+
 import gym1 from '@/public/assets/gym1.png';
 import gym2 from '../public/assets/gym2.png';
 import gym3 from '../public/assets/gym3.png';
@@ -27,17 +33,28 @@ function Landing() {
     { head: 'जिम की फीस क्या रखे?', para: 'आम तौर पर जिम की फीस 1000 रुपये मासिक होती है अगर आपके जिम में 200 लोग भी नियमित तौर पर आते हैं तो आपको फीस से 2 लाख रुपये प्राप्त होते हैं छोटे मोटे खर्चों को निकाल दे तो आपको हर महीने 1 लाख रुपये आसानी से बच जाएंगे जब मशीनों का कॉस्ट निकल जाता है तो फिर आपकी ये आमदनी सीधे 1 लाख 40 हजार रुपये मासिक हो जाता है कोशिश हो कि 200 ग्राहकों की संख्या हमेशा मेंटेन रहे', imageSrc: gym8 }
   ];
 
+  const benefitList = [
+    { text: 'In-depth knowledge of the Indian gym market and target demographics.' },
+    { text: 'Step-by-step guidance on setting up your gym, including legal compliance.' },
+    { text: 'Business planning and financial management strategies.' },
+    { text: 'Facility design and equipment selection insights.' },
+    { text: 'Effective marketing and branding techniques for the Indian market.' },
+    { text: 'Operational efficiency and staff management best practices.' },
+    { text: 'Ongoing support, resources, and networking opportunities.' },
+  ]
+
   return (
     <div className="App">
       <header className="App-header">
         <img src='/upskill.png' className="upskill-logo" alt="upskill-logo" />
       </header>
-      <h1 style={{ color: 'red', fontSize: 60, with: '100%' }} >This website is under construction.</h1>
-      <p style={{ marginLeft: 40, marginRight: 40 }}>
+      <h1 style={{ color: 'red', fontSize: 30, with: '100%' }} >This website is under construction !!</h1>
+      <h1 style={{ color: '#6c3ad3', fontSize: 20, with: '100%', border: '5px solid #6c3ad3', marginTop: 20, margin: 20, borderRadius: 5, padding: 10 }} >Your Complete Guide to Opening a Successful Gym in India!</h1>
+      {/* <p style={{ marginLeft: 40, marginRight: 40 }}>
         <span style={{ textTransform: 'uppercase', fontWeight: 800 }}>Complete Workshop </span>
         <span style={{ textTransform: 'capitalize', fontWeight: 800 }}>Video &nbsp;</span>
         <span style={{ textTransform: 'lowercase', fontWeight: 300 }}>for how to open your own gym</span>
-      </p>
+      </p> */}
 
       <p style={{ marginLeft: 20, marginRight: 20, fontSize: 35, fontWeight: 600, textTransform: 'capitalize' }}>
         <span style={{ color: '#6c3ad3' }}>gym</span> या <span style={{ color: '#6c3ad3' }}>fitness</span> सेंटर का बिजनेस कैसे शुरू करें?
@@ -46,20 +63,60 @@ function Landing() {
         <span style={{ color: '#6c3ad3' }}>Complete Knowledge</span> in just  <span style={{ color: '#6c3ad3' }}>45 Mins</span> Video
       </p>
 
+      <div className="videoCardGym">
+        <div style={{ width: '100%' }}>
+          <img src='/assets/1.png' alt={'heading'} style={{ width: 'calc(100% - 0px)' }} />
+          {/* <p>Are you passionate about fitness and dreaming of starting your own gym in India?</p> */}
+          <p>Our comprehensive course is designed to equip you with the knowledge,
+            strategies, and practical insights you need to turn your dream into a reality.
+          </p>
+          <Button className="animate-btn" variant="contained" style={{ backgroundColor: '#ffb601', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
+            Buy @499 now and save upto 1 lakh
+          </Button>
+        </div>
+      </div>
+      <hr style={{ width: '60%' }} />
       <p style={{ marginLeft: 40, marginRight: 40, fontSize: 25, fontWeight: 600, }}>
-        <span style={{ color: '#6c3ad3' }}>What</span> you will <span style={{ color: '#6c3ad3' }}>Get</span> from this Workshop
+        <span style={{ color: '#6c3ad3' }}>What</span> you will <span style={{ color: '#6c3ad3' }}>Learn</span> from this course?
+      </p>
+      <p style={{ textTransform: 'capitalize', fontWeight: 300, width: '80%', margin: 'auto' }}>
+        <span style={{ color: '#6c3ad3' }}> 7 Proven Steps</span> for Opening <span style={{ color: '#6c3ad3' }}>Successful Gym </span> in India!
       </p>
       <br />
       <div className="gym-card-container">
-        {[...Array(8).keys()].map((k) => (
-          <BenefitList key={k} iconSrc={`/assets/gym${k + 1}.png`} heading={imglist[k].head} paragraph={imglist[k].para} />
-        ))}
+        {benefitList.map(({ text }, i) =>
+          <BenefitList key={i} iconSrc={`/assets/check.png`} heading={text} paragraph={text} />
+        )}
+        <div className="videoCardGym">
+          <p>Buy this course now and get a complete checklist for opening a gym pdf along with all the trick to save money upto 1 lakh or more</p>
+          <Button className="animate-btn" variant="contained" style={{ backgroundColor: '#ffb601', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
+            Buy @499 now and save upto 1 lakh
+          </Button>
+          <p style={{ textTransform: 'capitalize', fontWeight: 300 }}>
+            <span style={{ color: '#ffb601' }}>here is How you can Save</span> upto  <span style={{ color: '#ffb601' }}>1 Lakh </span> or more
+          </p>
+          <InvoiceTable />
+          <span style={{ fontSize: 8, marginTop: 16, textAlign: 'right', width: '100%', display: 'block' }}>*You can even save more</span>
+        </div>
+      </div>
+      <p style={{ textTransform: 'capitalize', fontWeight: 300, fontSize: 20 }}>
+        <span style={{ color: '#6c3ad3' }}>How will this workshop help you?</span> <br /> in just  <span style={{ color: '#6c3ad3' }}>45 Mins</span> Video
+        <h2 style={{ fontSize: 16, color: 'red' }}>Your are going to invest more then lakhs of Rupees for opening a gym </h2>
+        <img src="/assets/gym6.png" style={{ width: '80%', margin: 'auto' }} />
+        <h5 style={{ color: '#6c3ad3', fontWeight: 300 }}>so buying this course @499 will going to help you by providing you Step-by-step guidance on setting up a gym and saving costs in the process.</h5>
+      </p>
+      <div className="videoCardGym" style={{ backgroundColor: 'transparent' }}>
+        <Button className="animate-btn" variant="contained" style={{ backgroundColor: '#ffb601', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
+          Buy @499 now and save upto 1 lakh
+        </Button>
       </div>
       <br />
       <br />
       <footer className="footer">This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in ANY WAY. FACEBOOK is a trademark of Facebook Inc. If you have any questions, please feel free to get in touch using the "Contact Us" link provided above.</footer>
-      <Button variant="contained" style={{ position: 'fixed', textTransform: 'initial', borderRadius: 0, fontWeight: 700, bottom: 0, left: 0, right: 0 }} endIcon={<SendIcon />}>
-        Buy this course @499 now and save more then ₹1 lakh
+
+      <smal style={{ marginBottom: 50, display: 'block' }}>By clicking buy button, I have read and agree to Upskill <Link href="/refund_policy"> Refund Policy </Link> and <Link href="/privacy_policy">Privacy Policy</Link> </smal>
+      <Button className="animate-btn" variant="contained" style={{ position: 'fixed', borderRadius: 10, width: '87%', margin: 'auto', bottom: 0, left: 0, right: 0, backgroundColor: '#ffb601', color: '#fff', borderRadius: 100, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
+        Buy @499 now and save upto 1 lakh
       </Button>
     </div>
   );
