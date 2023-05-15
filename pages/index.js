@@ -70,9 +70,9 @@ function Landing() {
           <p>Our comprehensive course is designed to equip you with the knowledge,
             strategies, and practical insights you need to turn your dream into a reality.
           </p>
-          <Button className="animate-btn" variant="contained" style={{ backgroundColor: '#ffb601', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
+          <a href="https://imjo.in/r7Eqpd"><Button className="animate-btn" variant="contained" style={{ backgroundColor: '#ffb601', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
             Buy @499 now and save upto 1 lakh
-          </Button>
+          </Button></a>
         </div>
       </div>
       <hr style={{ width: '60%' }} />
@@ -87,37 +87,41 @@ function Landing() {
         {benefitList.map(({ text }, i) =>
           <BenefitList key={i} iconSrc={`/assets/check.png`} heading={text} paragraph={text} />
         )}
-        <div className="videoCardGym">
-          <p>Buy this course now and get a complete checklist for opening a gym pdf along with all the trick to save money upto 1 lakh or more</p>
-          <Button className="animate-btn" variant="contained" style={{ backgroundColor: '#ffb601', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
-            Buy @499 now and save upto 1 lakh
-          </Button>
-          <p style={{ textTransform: 'capitalize', fontWeight: 300 }}>
-            <span style={{ color: '#ffb601' }}>here is How you can Save</span> upto  <span style={{ color: '#ffb601' }}>1 Lakh </span> or more
-          </p>
-          <InvoiceTable />
-          <span style={{ fontSize: 8, marginTop: 16, textAlign: 'right', width: '100%', display: 'block' }}>*You can even save more</span>
-        </div>
       </div>
-      <p style={{ textTransform: 'capitalize', fontWeight: 300, fontSize: 20 }}>
-        <span style={{ color: '#6c3ad3' }}>How will this workshop help you?</span> <br /> in just  <span style={{ color: '#6c3ad3' }}>45 Mins</span> Video
-        <h2 style={{ fontSize: 16, color: 'red' }}>Your are going to invest more then lakhs of Rupees for opening a gym </h2>
-        <img src="/assets/gym6.png" style={{ width: '80%', margin: 'auto' }} />
-        <h5 style={{ color: '#6c3ad3', fontWeight: 300 }}>so buying this course @499 will going to help you by providing you Step-by-step guidance on setting up a gym and saving costs in the process.</h5>
-      </p>
-      <div className="videoCardGym" style={{ backgroundColor: 'transparent' }}>
-        <Button className="animate-btn" variant="contained" style={{ backgroundColor: '#ffb601', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
+      <div className="videoCardGym">
+        <p>Buy this course now and get a complete checklist for opening a gym pdf along with all the trick to save money upto 1 lakh or more</p>
+        <a href="https://imjo.in/r7Eqpd"><Button className="animate-btn" variant="contained" style={{ backgroundColor: '#ffb601', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
           Buy @499 now and save upto 1 lakh
-        </Button>
+        </Button></a>
+        <p style={{ textTransform: 'capitalize', fontWeight: 300 }}>
+          <span style={{ color: '#ffb601' }}>here is How you can Save</span> upto  <span style={{ color: '#ffb601' }}>1 Lakh </span> or more
+        </p>
+        <InvoiceTable />
+        <span style={{ fontSize: 8, marginTop: 16, textAlign: 'right', width: '100%', display: 'block' }}>*You can even save more</span>
+      </div>
+      <div style={{ textTransform: 'capitalize', fontWeight: 300, fontSize: 20 }}>
+        <hr width="80%" />
+
+        <p style={{ marginLeft: 40, marginRight: 40, fontSize: 25, fontWeight: 600, }}>
+          <span style={{ color: '#6c3ad3' }}>How will this workshop help you?</span> in just <span style={{ color: '#6c3ad3' }}>45 Mins</span> Video
+        </p>
+        <h2 style={{ fontSize: 16, fontWeight: 400, color: 'red' }}>Your are going to invest more then lakhs of Rupees for opening a gym </h2>
+        <img src="/assets/gym6.png" style={{ width: '80%', margin: 'auto' }} />
+        <h5 style={{ color: 'red', width: '80%', margin: '20px auto', fontWeight: 400 }}>so buying this course @499 will going to help you by providing you Step-by-step guidance on setting up a gym and saving costs in the process.</h5>
+      </div>
+      <div className="videoCardGym" style={{ backgroundColor: 'transparent' }}>
+        <a href="https://imjo.in/r7Eqpd"><Button className="animate-btn" variant="contained" style={{ backgroundColor: '#ffb601', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
+          Buy @499 now and save upto 1 lakh
+        </Button></a>
       </div>
       <br />
       <br />
       <footer className="footer">This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in ANY WAY. FACEBOOK is a trademark of Facebook Inc. If you have any questions, please feel free to get in touch using the "Contact Us" link provided above.</footer>
 
       <smal style={{ marginBottom: 50, display: 'block' }}>By clicking buy button, I have read and agree to Upskill <Link href="/refund_policy"> Refund Policy </Link> and <Link href="/privacy_policy">Privacy Policy</Link> </smal>
-      <Button className="animate-btn" variant="contained" style={{ position: 'fixed', borderRadius: 10, width: '87%', margin: 'auto', bottom: 0, left: 0, right: 0, backgroundColor: '#ffb601', color: '#fff', borderRadius: 100, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
+      <a href="https://imjo.in/r7Eqpd"><Button className="animate-btn" variant="contained" style={{ position: 'fixed', borderRadius: 10, width: '87%', margin: 'auto', bottom: 0, left: 0, right: 0, backgroundColor: '#ffb601', color: '#fff', borderRadius: 100, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
         Buy @499 now and save upto 1 lakh
-      </Button>
+      </Button></a>
     </div>
   );
 }
