@@ -7,6 +7,8 @@ import logo from '../public/upskill.png';
 import BenefitList from '../components/BenefitList';
 import InvoiceTable from '../components/InvoiceTable';
 import ProfessionList from '../components/WhoCanOpt';
+import FAQSection from '../components/QandA';
+
 
 import banner1 from '@/public/assets/1.png';
 
@@ -117,6 +119,16 @@ function Landing() {
       </div>
       <hr width="80%" />
       <ProfessionList />
+      <a href="https://imjo.in/r7Eqpd"><Button className="animate-btn" variant="contained" style={{ backgroundColor: '#6b38d0', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
+        Buy @499 now and save upto 1 lakh
+      </Button></a>
+      <br />
+      <br />
+      <br />
+
+      <hr width="80%" />
+
+      <FAQSection />
       <a href="https://imjo.in/r7Eqpd"><Button className="animate-btn" variant="contained" style={{ backgroundColor: '#6b38d0', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
         Buy @499 now and save upto 1 lakh
       </Button></a>
