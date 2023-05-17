@@ -6,6 +6,7 @@ import logo from '../public/upskill.png';
 // import './App.css';
 import BenefitList from '../components/BenefitList';
 import InvoiceTable from '../components/InvoiceTable';
+import ProfessionList from '../components/WhoCanOpt';
 
 import banner1 from '@/public/assets/1.png';
 
@@ -65,7 +66,7 @@ function Landing() {
 
       <div className="videoCardGym">
         <div style={{ width: '100%' }}>
-          <img src='/assets/gym6.png' alt={'heading'} style={{ width: 'calc(100% - 0px)' }} />
+          <img src='/assets/webimage2.png' alt={'heading'} style={{ width: 'calc(100% - 0px)' }} />
           {/* <p>Are you passionate about fitness and dreaming of starting your own gym in India?</p> */}
           <p>Our comprehensive course is designed to equip you with the knowledge,
             strategies, and practical insights you need to turn your dream into a reality.
@@ -106,14 +107,19 @@ function Landing() {
           <span style={{ color: '#6c3ad3' }}>How will this workshop help you?</span> in just <span style={{ color: '#6c3ad3' }}>45 Mins</span> Video
         </p>
         <h2 style={{ fontSize: 16, fontWeight: 400, color: 'red' }}>Your are going to invest more then lakhs of Rupees for opening a gym </h2>
-        <img src="/assets/gym6.png" style={{ width: '80%', margin: 'auto' }} />
-        <h5 style={{ color: 'red', width: '80%', margin: '20px auto', fontWeight: 400 }}>so buying this course @499 will going to help you by providing you Step-by-step guidance on setting up a gym and saving costs in the process.</h5>
+        <img src="/assets/webimage1.png" style={{ width: '80%', margin: 'auto' }} />
+        <h5 style={{ color: '#2d2b2b', width: '80%', margin: '20px auto', fontWeight: 400, textTransform: 'initial' }}>So buying this course @499 will going to help you by providing you Step-by-step guidance on setting up a gym and saving costs in the process.</h5>
       </div>
       <div className="videoCardGym" style={{ backgroundColor: 'transparent' }}>
-        <a href="https://imjo.in/r7Eqpd"><Button className="animate-btn" variant="contained" style={{ backgroundColor: '#ffb601', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
+        <a href="https://imjo.in/r7Eqpd"><Button className="animate-btn" variant="contained" style={{ backgroundColor: '#6b38d0', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
           Buy @499 now and save upto 1 lakh
         </Button></a>
       </div>
+      <hr width="80%" />
+      <ProfessionList />
+      <a href="https://imjo.in/r7Eqpd"><Button className="animate-btn" variant="contained" style={{ backgroundColor: '#6b38d0', color: '#fff', borderRadius: 40, textTransform: 'initial', padding: 10, fontWeight: 700, }} >
+        Buy @499 now and save upto 1 lakh
+      </Button></a>
       <br />
       <br />
       <footer className="footer">This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in ANY WAY. FACEBOOK is a trademark of Facebook Inc. If you have any questions, please feel free to get in touch using the "Contact Us" link provided above.</footer>
